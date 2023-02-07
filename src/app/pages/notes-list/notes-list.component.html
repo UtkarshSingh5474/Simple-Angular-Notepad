@@ -1,0 +1,20 @@
+<div class="main-container">
+
+    <div class="search-bar-container">
+        <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="text" placeholder="Filter">
+              <span class="icon is-small is-left">
+                <i class="fas fa-search"></i>
+              </span>
+            </p>
+          </div>
+    </div>
+
+    <div class="notes-list">
+       <app-notes-card *ngFor="let note of notes" [title] = "note.title" [body] = "note.body"></app-notes-card> 
+       
+    </div>
+
+    <button class="button floating-add-button is-primary" routerLink = "newNote">+Add</button>
+</div>
